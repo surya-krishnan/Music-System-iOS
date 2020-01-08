@@ -15,6 +15,9 @@
 		DE2B0D6723B4270A005CC068 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B0D6623B4270A005CC068 /* MainScreen.swift */; };
 		DE2B0D6923B42946005CC068 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B0D6823B42946005CC068 /* UIViewExtension.swift */; };
 		DE2B0D6B23B42A58005CC068 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B0D6A23B42A58005CC068 /* Constants.swift */; };
+		DE30FF2023C553270059FFA8 /* StudentData.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30FF1D23C553260059FFA8 /* StudentData.txt */; };
+		DE30FF2123C553270059FFA8 /* InstrumentData.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30FF1E23C553270059FFA8 /* InstrumentData.txt */; };
+		DE30FF2223C553270059FFA8 /* UserData.txt in Resources */ = {isa = PBXBuildFile; fileRef = DE30FF1F23C553270059FFA8 /* UserData.txt */; };
 		DEB348B223BEB0EE00F97C84 /* FileIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB348B123BEB0EE00F97C84 /* FileIO.swift */; };
 		DEB348B623BF004300F97C84 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB348B523BF004300F97C84 /* Student.swift */; };
 		DEB348B823BF00B200F97C84 /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEB348B723BF00B200F97C84 /* Instrument.swift */; };
@@ -31,6 +34,9 @@
 		DE2B0D6623B4270A005CC068 /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
 		DE2B0D6823B42946005CC068 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DE2B0D6A23B42A58005CC068 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DE30FF1D23C553260059FFA8 /* StudentData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = StudentData.txt; sourceTree = "<group>"; };
+		DE30FF1E23C553270059FFA8 /* InstrumentData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = InstrumentData.txt; sourceTree = "<group>"; };
+		DE30FF1F23C553270059FFA8 /* UserData.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UserData.txt; sourceTree = "<group>"; };
 		DEB348B123BEB0EE00F97C84 /* FileIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileIO.swift; sourceTree = "<group>"; };
 		DEB348B523BF004300F97C84 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		DEB348B723BF00B200F97C84 /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 		DE2B0D4B23B4255E005CC068 /* InstrumentChecker */ = {
 			isa = PBXGroup;
 			children = (
+				DE30FF1E23C553270059FFA8 /* InstrumentData.txt */,
+				DE30FF1D23C553260059FFA8 /* StudentData.txt */,
+				DE30FF1F23C553270059FFA8 /* UserData.txt */,
 				DE2B0D4C23B4255E005CC068 /* AppDelegate.swift */,
 				DE2B0D4E23B4255E005CC068 /* SceneDelegate.swift */,
 				DE2B0D6823B42946005CC068 /* UIViewExtension.swift */,
@@ -142,6 +151,9 @@
 			files = (
 				DE2B0D5923B4255F005CC068 /* LaunchScreen.storyboard in Resources */,
 				DE2B0D5623B4255F005CC068 /* Assets.xcassets in Resources */,
+				DE30FF2123C553270059FFA8 /* InstrumentData.txt in Resources */,
+				DE30FF2223C553270059FFA8 /* UserData.txt in Resources */,
+				DE30FF2023C553270059FFA8 /* StudentData.txt in Resources */,
 				DE2B0D5423B4255E005CC068 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

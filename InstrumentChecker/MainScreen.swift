@@ -17,7 +17,7 @@ class MainScreen: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        welcomeText.text = "Welcome, " + "Bob"
+        welcomeText.text = "Welcome, " + AppData().userData!.name
         
         welcomeText.sizeToFit()
         buttonStack.sizeToFit()

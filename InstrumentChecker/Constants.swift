@@ -18,9 +18,9 @@ struct Colours {
 
 struct AppData {
     
-    var userData: Student?
-    var instruments = [Instrument]()
-    var students = [Student]()
+    public var userData: Student?
+    public var instruments = [Instrument]()
+    public var students = [Student]()
     
     init() {
         
@@ -29,29 +29,40 @@ struct AppData {
         /*
          Initializes instrument data by reading from file
          **/
-        let instDataRead = ioHelper.getData(file: "InstrumentData.txt").components(separatedBy: .newlines)
+        let instDataRead = ioHelper.getData(file: "InstrumentData").components(separatedBy: .newlines)
         
         for item in instDataRead {
+            
+            if item == "" {
+                break;
+            }
+            
             let store = item.split(separator: ",")
             
-            if store[5] == "" && store[6] == "" {
+            if store[5] == " " && store[6] == " " {
                 instruments.append(Instrument(serial: String(store[0]), instrumentType: String(store[1]), instrumentNum: String(store[2]), model: String(store[3]), make: String(store[4])))
             } else {
                 instruments.append(Instrument(serial: String(store[0]), instrumentType: String(store[1]), instrumentNum: String(store[2]), model: String(store[3]), make: String(store[4]), dateOut: String(store[5]), timeOut: String(store[6])))
                 
             }
+            
         }
         
         
         /*
          Initializes student data
          **/
-        let studDataRead = ioHelper.getData(file: "StudentData.txt").components(separatedBy: .newlines)
+        let studDataRead = ioHelper.getData(file: "StudentData").components(separatedBy: .newlines)
         
         for item in studDataRead {
+            
+            if item == "" {
+                break;
+            }
+            
             let store = item.split(separator: ",")
             
-            if store[3] == "" {
+            if store[3] == "/" {
                 students.append(Student(name: String(store[0]), studentID: String(store[1]), grade: String(store[2])))
             } else {
                 let inst = findInst(instrumentID: String(store[3]), instArr: instruments)
@@ -68,7 +79,7 @@ struct AppData {
         /*
          Initializes user data by reading from file
          **/
-        let userDataRead = ioHelper.getData(file: "UserData.txt")
+        let userDataRead = ioHelper.getData(file: "UserData")
         userData = findStudent(studentID: userDataRead, studArr: students)
         
         

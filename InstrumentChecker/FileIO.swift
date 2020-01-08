@@ -11,34 +11,31 @@ import Foundation
 class FileIO {
     func writeData(file: String, writeData: [String]) {
 
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
+        let filePath = Bundle.main.path(forResource: file, ofType: "txt")
+        let URL = NSURL.fileURL(withPath: filePath!)
 
-            let fileURL = dir.appendingPathComponent(file)
-
-            //writing
-            do {
-                for item in writeData {
-                    try item.write(to: fileURL, atomically: false, encoding: .utf8)
-                }
+        //writing
+        do {
+            for item in writeData {
+                try item.write(to: URL, atomically: false, encoding: .utf8)
             }
-            catch { print(error) }
         }
+        catch { print(error) }
+    
     }
 
     func getData(file:String) -> String {
         
+        let filePath = Bundle.main.path(forResource: file, ofType: "txt")
+        let URL = NSURL.fileURL(withPath: filePath!)
         var data = ""
-        
-        if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
 
-            let fileURL = dir.appendingPathComponent(file)
-
-            //reading
-            do {
-                data = try String(contentsOf: fileURL, encoding: .utf8)
-            }
-            catch { print(error) }
+        //reading
+        do {
+            data = try String(contentsOf: URL, encoding: .utf8)
         }
+        catch { print(error) }
+        
         
         return data;
     }
